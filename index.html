@@ -1,261 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>Ouen Hub - \f1 \'c0\'b3\'b4\'a9\'ac\'a1\'b0\'ca\'ad\'ec\'ab\'ac \f0</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Songti TC'; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Songti TC'; color: #000000; -webkit-text-stroke: #000000; min-height: 17.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ouen Hub - 應援活動原型 v5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* 全域樣式（略） */
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #1C1E21;
+      font-size: 16px;
+    }
+    .app-container {
+      width: 375px;
+      height: 812px;
+      margin: 2rem auto;
+      border: 8px solid #111;
+      border-radius: 40px;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      overflow: hidden;
+    }
+    .app-header, .app-footer-nav {
+      padding: 1rem;
+      background: white;
+    }
+    .app-content {
+      padding: 1rem;
+    }
+    h1 { color: #6A5ACD; font-size: 1.5rem; text-align: center; }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="zh-Hant"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Ouen Hub - 應援活動原型 v5&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts: Noto Sans TC --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Font Awesome 6 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 全域設定 &amp; 變數 --- */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--primary-color: #6A5ACD; /* 鮮明紫羅蘭 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--secondary-color: #F0F2F5; /* 淡灰背景 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-color: #1C1E21; /* 深灰文字 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--light-text-color: #65676B; /* 淺灰文字 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--border-color: #E4E6EB;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--white-color: #FFFFFF;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--hot-color: #FF4500; /* 熱度橘紅色 */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body { font-family: 'Noto Sans TC', sans-serif; margin: 0; background-color: #f8f9fa; color: var(--text-color); font-size: 16px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.prototype-section { border: 2px dashed var(--border-color); margin: 2rem; padding: 1.5rem; border-radius: 12px; background-color: var(--white-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.prototype-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-container { width: 375px; height: 812px; margin: 1rem auto; border: 8px solid #111; border-radius: 40px; box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); position: relative; background-color: var(--white-color); display: flex; flex-direction: column; overflow: hidden; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-header { padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--secondary-color); background-color: var(--white-color); flex-shrink: 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-header .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-header .header-icons i { font-size: 1.2rem; margin-left: 1rem; cursor: pointer; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-content { flex-grow: 1; overflow-y: auto; background-color: #fafafa; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-footer-nav { display: flex; justify-content: space-around; padding: 0.8rem 0; border-top: 1px solid var(--secondary-color); background-color: var(--white-color); flex-shrink: 0; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-footer-nav .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: var(--light-text-color); cursor: pointer; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-footer-nav .nav-item.active { color: var(--primary-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-footer-nav .nav-item i { font-size: 1.4rem; margin-bottom: 4px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn { padding: 0.75rem 1.25rem; border: none; border-radius: 2rem; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease-in-out; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-primary { background-color: var(--primary-color); color: var(--white-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-secondary { background-color: var(--secondary-color); color: var(--text-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.info-item { display: flex; align-items: center; color: var(--light-text-color); font-size: 0.9rem; margin-bottom: 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.info-item i { margin-right: 0.6rem; width: 16px; text-align: center; color: var(--primary-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-card, .support-event-card { background-color: var(--white-color); border-radius: 16px; margin-bottom: 1.25rem; overflow: hidden; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; border: 1px solid var(--border-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-card:hover, .support-event-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); transform: translateY(-4px); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card-image { width: 100%; height: 160px; object-fit: cover; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card-content { padding: 1rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card-title { font-size: 1.2rem; font-weight: 700; margin: 0 0 0.75rem 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.view-toggle { display: flex; justify-content: center; margin-bottom: 1.5rem; background-color: var(--secondary-color); border-radius: 2rem; padding: 4px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.view-toggle button { background: none; border: none; padding: 0.5rem 1.2rem; cursor: pointer; border-radius: 2rem; font-weight: 500; color: var(--light-text-color); display: flex; align-items: center; gap: 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.view-toggle button.active { background-color: var(--white-color); color: var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-detail-header { position: relative; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-detail-header img { width: 100%; height: 200px; object-fit: cover; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-detail-header-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: var(--white-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-detail-header-overlay h2 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.major-event-detail-header-overlay p { margin: 0; font-size: 0.9rem; opacity: 0.9; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.support-event-card .card-content { position: relative; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.heat-metric { position: absolute; top: 1rem; right: 1rem; background: var(--secondary-color); color: var(--hot-color); border-radius: 1rem; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.3rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.list-controls { display: flex; justify-content: space-between; align-items: center; padding: 0 0.5rem 1rem 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.list-controls .sort-options button { background: none; border: 1px solid var(--border-color); color: var(--light-text-color); font-size: 0.8rem; padding: 0.4rem 0.8rem; border-radius: 1rem; cursor: pointer; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.list-controls .sort-options button.active { background: var(--primary-color); color: var(--white-color); border-color: var(--primary-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.detail-section { background: var(--white-color); padding: 1.25rem; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--secondary-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.detail-section-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.detail-section-title i { color: var(--primary-color); margin-right: 0.75rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-group { margin-bottom: 1.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-group label { display: block; font-weight: 700; margin-bottom: 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; box-sizing: border-box; font-family: 'Noto Sans TC', sans-serif; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.profile-header { text-align: center; margin: 1rem 0 2rem 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.profile-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid var(--white-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin-bottom: 0.75rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.achievement-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 1rem; text-align: center; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.achievement-item i { font-size: 2.5rem; color: var(--primary-color); background-color: var(--secondary-color); width: 60px; height: 60px; line-height: 60px; border-radius: 50%; margin-bottom: 0.5rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1 class="prototype-title"&gt;Ouen Hub 應援 App - 高保真原型 (v5 - 完整修復版)&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ========= 原型 1: 主活動探索頁 ========= --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="prototype-title"&gt;1. 主活動探索頁&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;header class="app-header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="logo"&gt;&lt;i class="fa-solid fa-fan"&gt;&lt;/i&gt; Ouen Hub&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="header-icons"&gt;&lt;i class="fa-solid fa-magnifying-glass"&gt;&lt;/i&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;main class="app-content" style="padding:1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="view-toggle"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="active"&gt;&lt;i class="fa-solid fa-list-ul"&gt;&lt;/i&gt; 列表檢視&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button&gt;&lt;i class="fa-regular fa-calendar-days"&gt;&lt;/i&gt; 日曆檢視&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="major-event-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="https://placehold.co/600x320/6A5ACD/FFFFFF?text=SUPER+JUNIOR" class="card-image"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="card-content"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h3 class="card-title"&gt;SUPER JUNIOR 20週年巡迴演唱會&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="info-item"&gt;&lt;i class="fa-regular fa-calendar"&gt;&lt;/i&gt; 2025/08/16 - 2025/08/18&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="info-item"&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt; 台北小巨蛋&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/main&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;footer class="app-footer-nav"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item active"&gt;&lt;i class="fa-solid fa-house"&gt;&lt;/i&gt;&lt;span&gt;探索&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item"&gt;&lt;i class="fa-regular fa-square-plus"&gt;&lt;/i&gt;&lt;span&gt;發起&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item"&gt;&lt;i class="fa-regular fa-user"&gt;&lt;/i&gt;&lt;span&gt;個人&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ========= 原型 2: 主活動詳情頁 ========= --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="prototype-title"&gt;2. 主活動詳情頁&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;header class="app-header" style="background:transparent; border:none; position:absolute; top:0; left:0; right:0; z-index:10;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>&lt;i class="fa-solid fa-arrow-left" style="color:white; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:50%;"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>&lt;i class="fa-solid fa-share-nodes" style="color:white; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:50%;"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;main class="app-content" style="padding: 0;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="major-event-detail-header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="https://placehold.co/600x400/6A5ACD/FFFFFF?text=SUPER+SHOW"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="major-event-detail-header-overlay"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h2&gt;SUPER SHOW SPIN-OFF&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p&gt;SUPER JUNIOR 20週年巡迴演唱會&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div style="padding: 1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="list-controls"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p style="font-weight: 700; margin:0;"&gt;相關應援活動&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="sort-options"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button class="active"&gt;依熱度&lt;/button&gt;&lt;button&gt;依時間&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="support-event-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="card-content"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="heat-metric"&gt;&lt;i class="fa-solid fa-fire"&gt;&lt;/i&gt; 987&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h3 class="card-title" style="font-size: 1.1rem;"&gt;E.L.F. 聯合手幅發放&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                             </span>&lt;div class="info-item"&gt;&lt;i class="fa-regular fa-clock"&gt;&lt;/i&gt; 演唱會當日 14:00 開始&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                             </span>&lt;div class="info-item"&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt; 小巨蛋 2 號出口外廣場&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/main&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ========= 原型 3: 應援活動詳情頁 (RESTORED) ========= --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="prototype-title"&gt;3. 應援活動詳情頁&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;header class="app-header"&gt;&lt;i class="fa-solid fa-arrow-left"&gt;&lt;/i&gt;&lt;div class="logo"&gt;應援詳情&lt;/div&gt;&lt;i class="fa-solid fa-share-nodes"&gt;&lt;/i&gt;&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;main class="app-content" style="padding:1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/600x400/A9A9A9/FFFFFF?text=手幅預覽圖" alt="手幅預覽圖" style="width:100%; border-radius: 12px; margin-bottom: 1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h2 class="card-title" style="font-size: 1.5rem;"&gt;E.L.F. 聯合手幅發放&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="info-item"&gt;&lt;i class="fa-solid fa-user-pen"&gt;&lt;/i&gt; 發起人: @elf_union_tw&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="info-item"&gt;&lt;i class="fa-solid fa-link"&gt;&lt;/i&gt; 隸屬：SUPER JUNIOR 20週年演唱會&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="info-item"&gt;&lt;i class="fa-solid fa-fire" style="color:var(--hot-color);"&gt;&lt;/i&gt; 熱度: 987&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="detail-section" style="margin-top:1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="detail-section-title"&gt;&lt;i class="fa-solid fa-gift"&gt;&lt;/i&gt; 領取任務&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="margin: 0; line-height: 1.6; font-size: 0.9rem;"&gt;1. 出示當日演唱會門票&lt;br&gt;2. 追蹤主辦方 IG @elf_union_tw&lt;br&gt;3. 大喊一聲「SUPER JUNIOR 我們永遠愛你！」&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="action-buttons" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-secondary"&gt;&lt;i class="fa-regular fa-heart"&gt;&lt;/i&gt; 收藏&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-primary"&gt;&lt;i class="fa-regular fa-comment"&gt;&lt;/i&gt; 留言&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;/main&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ========= 原型 4: 發起活動頁 (RESTORED) ========= --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="prototype-title"&gt;4. 發起活動頁&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;header class="app-header"&gt;&lt;i class="fa-solid fa-xmark"&gt;&lt;/i&gt;&lt;div class="logo"&gt;發起新的應援&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;main class="app-content" style="padding:1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;form&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;label for="major-event"&gt;選擇隸屬的主活動&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;select id="major-event"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;option&gt;SUPER JUNIOR 20週年巡迴演唱會&lt;/option&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;option&gt;LE SSERAFIM TOUR 'FLAME RISES'&lt;/option&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/select&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;label for="event-title"&gt;應援活動標題&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="event-title" placeholder="例如：聯合手幅發放"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;label for="event-location"&gt;時間與地點&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="event-location" placeholder="例如：演唱會當日 14:00 @ 小巨蛋2號出口"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;label for="event-task"&gt;領取任務說明&lt;/label&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;textarea id="event-task" placeholder="每項任務請斷行..." rows="4"&gt;&lt;/textarea&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button type="button" class="btn btn-primary" style="width: 100%;"&gt;發佈應援活動&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/form&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;/main&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- ========= 原型 5: 個人頁 (RESTORED) ========= --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="prototype-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2 class="prototype-title"&gt;5. 個人頁&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;header class="app-header"&gt;&lt;div&gt;&lt;/div&gt;&lt;div class="logo"&gt;個人頁面&lt;/div&gt;&lt;i class="fa-solid fa-gear"&gt;&lt;/i&gt;&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;main class="app-content" style="padding:1rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="profile-header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="https://i.pravatar.cc/100?u=myprofile" alt="My Avatar" class="profile-avatar"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2 style="font-size: 1.5rem; font-weight: 700; margin: 0;"&gt;MyElfID&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="color: var(--light-text-color); font-size: 0.9rem; margin: 0.25rem 0 0 0;"&gt;SUPER JUNIOR &amp;hearts; E.L.F.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="detail-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="detail-section-title"&gt;&lt;i class="fa-solid fa-bookmark"&gt;&lt;/i&gt; 我收藏的應援&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="color: var(--light-text-color); text-align: center; font-size:0.9rem;"&gt;這裡會顯示您收藏的應援活動&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="detail-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="detail-section-title"&gt;&lt;i class="fa-solid fa-medal"&gt;&lt;/i&gt; 我的成就&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="achievement-grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="achievement-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-hand-holding-heart"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span&gt;首次參與&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="achievement-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                           </span>&lt;i class="fa-solid fa-camera-retro"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span&gt;首次回饋&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="achievement-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-bullhorn"&gt;&lt;/i&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span&gt;應援發起者&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/main&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;footer class="app-footer-nav"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item"&gt;&lt;i class="fa-solid fa-house"&gt;&lt;/i&gt;&lt;span&gt;探索&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item"&gt;&lt;i class="fa-regular fa-square-plus"&gt;&lt;/i&gt;&lt;span&gt;發起&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="nav-item active"&gt;&lt;i class="fa-regular fa-user"&gt;&lt;/i&gt;&lt;span&gt;個人&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+  <div class="app-container">
+    <div class="app-header">
+      <strong>Ouen Hub</strong>
+    </div>
+    <div class="app-content">
+      <h1>SUPER JUNIOR 20週年巡迴演唱會</h1>
+      <p>這是原型預覽畫面示意。</p>
+    </div>
+    <div class="app-footer-nav">
+      <span>© Ouen Hub</span>
+    </div>
+  </div>
 </body>
 </html>
