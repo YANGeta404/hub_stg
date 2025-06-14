@@ -54,6 +54,709 @@
 <p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: none; /* 預設隱藏所有頁面 */</b></span></p>
 <p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>min-height: 100vh;</b></span></p>
 <p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
-<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.view.active {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: block; /* 只顯示 active 的頁面 */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.container {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>max-width: 1000px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin: 0 auto;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- 通用元件 --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 10px 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: none;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-decoration: none;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: inline-block;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-primary {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: white;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-primary:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>transform: translateY(-2px);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: 0 6px 20px rgba(106, 90, 205, 0.4);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-secondary {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: var(--secondary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: white;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-outline {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: transparent;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: 1px solid var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.tag {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: #eee;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--text-light);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 4px 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Header / Nav --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.app-header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: white;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 15px 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: 0 2px 10px rgba(0,0,0,0.05);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>justify-content: space-between;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>position: sticky;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>top: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>z-index: 1000;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.logo {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 24px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 700;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.logo i { color: var(--secondary-color); }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.nav-actions {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.search-bar {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 8px 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.user-avatar {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 40px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>height: 40px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 50%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: #ccc;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>object-fit: cover;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Login View --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>#login-view {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>justify-content: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, rgba(106, 90, 205, 0.8), rgba(255, 105, 180, 0.8)), url(https://via.placeholder.com/1200x800/8d8d8d/ffffff?text=Fan+Event+Montage) center/cover no-repeat;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: white;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.login-box {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.2);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 40px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: var(--box-shadow);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.login-box h1 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 3em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.login-box p {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 1.2em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>opacity: 0.9;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.login-buttons .btn {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 80%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 1.1em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-google { background-color: #DB4437; color: white; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.btn-instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; }</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Home View --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.filter-bar {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>flex-wrap: wrap;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-grid {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 25px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background: var(--card-background);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: var(--box-shadow);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>overflow: hidden;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>transform: translateY(-5px);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: 0 8px 25px rgba(0,0,0,0.12);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card img {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 100%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>height: 180px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>object-fit: cover;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-content {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-content h3 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin: 0 0 10px 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 18px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-info {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 14px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--text-light);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-info div {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 5px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-info i {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-footer {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>justify-content: space-between;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-top: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 10px 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-likes {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-card-likes i {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--secondary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Event Detail View --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>overflow: hidden;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-header img {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 100%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>max-height: 400px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>object-fit: cover;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-body {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>grid-template-columns: 2fr 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-main h1 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 2.5em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-top: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-organizer {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-organizer span {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.detail-section {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 25px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.detail-section h2 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 1.5em;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding-bottom: 5px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.detail-section h2 i {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-right: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.detail-section p {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>line-height: 1.7;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-sidebar .sticky-sidebar {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>position: sticky;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>top: 90px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background: var(--card-background);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: var(--box-shadow);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.event-detail-sidebar h3 {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-top: 0;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.action-buttons .btn {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: block;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 100%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-sizing: border-box; /* Important for 100% width */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-section {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-top: 40px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-box {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 15px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-top: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding-top: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-top: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-content p { margin: 0 0 5px 0; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-content .comment-meta { font-size: 12px; color: var(--text-light); }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-form {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.comment-form textarea {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 100%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-family: inherit;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>resize: vertical;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Create Event View --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-section {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background: var(--card-background);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: var(--box-shadow);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-section h1 { margin-top: 0; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group label {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: block;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group input, .form-group textarea {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 100%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 12px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 16px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-sizing: border-box;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group textarea {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>resize: vertical;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>min-height: 100px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group .upload-box {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border: 2px dashed var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 8px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.form-group .upload-box:hover {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Profile View --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 25px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background: var(--card-background);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: var(--border-radius);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>box-shadow: var(--box-shadow);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 30px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-avatar {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 120px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>height: 120px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 50%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-info h1 { margin: 0 0 5px 0; }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-info p { margin: 0; color: var(--text-light); }</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-tabs {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-bottom: 1px solid var(--border-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>margin-bottom: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-tab {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>padding: 10px 5px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>cursor: pointer;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-bottom: 3px solid transparent;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-weight: 500;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.profile-tab.active {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-bottom-color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.achievement-grid {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: grid;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 20px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.achievement-badge {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>display: flex;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>align-items: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.achievement-badge i {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>font-size: 50px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>color: var(--primary-color);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>background-color: #e9e6ff;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>width: 80px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>height: 80px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>line-height: 80px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>border-radius: 50%;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>.achievement-badge span { font-weight: 500; }</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>/* --- Responsive Design --- */</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>.event-detail-body {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>.profile-header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>text-align: center;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>.app-header {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>flex-direction: column;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>gap: 10px;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/style&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/head&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;body&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;div id="login-view" class="view active"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div class="login-box"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;h1&gt;&lt;i class="fa-solid fa-hands-holding-heart"&gt;&lt;/i&gt; FanPals&lt;/h1&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;p&gt;不再錯過任何一個為愛發光的瞬間&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="login-buttons"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;button class="btn btn-google" onclick="showView('home-view')"&gt;&lt;i class="fa-brands fa-google"&gt;&lt;/i&gt; 使用 Google 登入&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;button class="btn btn-instagram" onclick="showView('home-view')"&gt;&lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt; 使用 Instagram 登入&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">    </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;div id="app-container" style="display: none;"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;header class="app-header"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="logo" onclick="showView('home-view')"&gt;&lt;i class="fa-solid fa-hands-holding-heart"&gt;&lt;/i&gt; FanPals&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="nav-actions"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;input type="text" class="search-bar" placeholder="搜尋偶像團體..."&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;button class="btn btn-secondary" onclick="showView('create-event-view')"&gt;&lt;i class="fa-solid fa-plus"&gt;&lt;/i&gt; 發起活動&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="user-avatar" onclick="showView('profile-view')"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/header&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div id="home-view" class="view"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="container"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="filter-bar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline active"&gt;全部&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline"&gt;即將開始&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline"&gt;進行中&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline"&gt;大台北&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline"&gt;台中&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;button class="btn btn-outline"&gt;高雄&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="event-grid"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;article class="event-card" onclick="showView('event-detail-view')"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;img src="https://via.placeholder.com/400x250/AEC6CF/333333?text=NCT+WISH+小卡" alt="應援物圖片"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="event-card-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;div class="tag" style="background-color: #cce5ff; color: #004085; margin-bottom: 10px;"&gt;NCT WISH&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h3&gt;出道百日紀念應援&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="event-card-info"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-calendar-days"&gt;&lt;/i&gt; 2025/06/15 - 2025/06/16&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt; 台北車站 M3 出口&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="event-card-footer"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="tag"&gt;進行中&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="event-card-likes"&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; 256&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/article&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;article class="event-card" onclick="showView('event-detail-view')"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;img src="https://via.placeholder.com/400x250/FFDAB9/333333?text=aespa+手幅" alt="應援物圖片"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="event-card-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="tag" style="background-color: #ffcce5; color: #850040; margin-bottom: 10px;"&gt;aespa&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h3&gt;Armageddon 專輯發售應援&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="event-card-info"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-calendar-days"&gt;&lt;/i&gt; 2025/06/20&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt; 台中一中街 IPets 愛寵咖&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="event-card-footer"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="tag" style="background: #e2e3e5; color: #495057;"&gt;即將開始&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="event-card-likes"&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; 188&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/article&gt;</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">                    </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                     </span>&lt;article class="event-card" onclick="showView('event-detail-view')"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;img src="https://via.placeholder.com/400x250/D3D3D3/333333?text=LE+SSERAFIM+杯套" alt="應援物圖片"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="event-card-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="tag" style="background-color: #d1ecf1; color: #0c5460; margin-bottom: 10px;"&gt;LE SSERAFIM&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h3&gt;EASY 回歸線下應援&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="event-card-info"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-calendar-days"&gt;&lt;/i&gt; 2025/05/25 - 2025/05/26&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt; 高雄捷運美麗島站&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="event-card-footer"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="tag" style="background: #f8d7da; color: #721c24;"&gt;已結束&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span class="event-card-likes"&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; 520&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/article&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div id="event-detail-view" class="view"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="container"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="event-detail-header"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;img src="https://via.placeholder.com/1000x400/AEC6CF/333333?text=NCT+WISH+出道百日紀念應援" alt="活動主圖"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="event-detail-body"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;main class="event-detail-main"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="tag" style="background-color: #cce5ff; color: #004085; font-size: 16px;"&gt;NCT WISH&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;h1&gt;出道百日紀念應援&lt;/h1&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="event-detail-organizer"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;img src="https://i.pravatar.cc/150?u=a042581f4e29026704e" alt="Organizer Avatar" class="user-avatar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;span&gt;由 &lt;strong&gt;WishFanTW&lt;/strong&gt; 發起&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;section class="detail-section"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h2&gt;&lt;i class="fa-solid fa-circle-info"&gt;&lt;/i&gt; 活動詳情&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;p&gt;為了慶祝我們WISH寶寶們出道百日，特別準備了精美小卡要送給大家！希望大家能一起為他們的未來應援！&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;section class="detail-section"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h2&gt;&lt;i class="fa-solid fa-gift"&gt;&lt;/i&gt; 應援物品&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;p&gt;一組兩張的DREAM小卡組，材質是星幻卡，真的超美！每人限領一份，發完為止喔！&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;section class="detail-section"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h2&gt;&lt;i class="fa-solid fa-flag-checkered"&gt;&lt;/i&gt; 領取任務&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;p&gt;請向工作人員出示以下任一項即可領取：&lt;br&gt;1. NCT WISH《WISH》實體專輯&lt;br&gt;2. Weverse 官方會員資格證明截圖&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;section class="comment-section"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;h2&gt;&lt;i class="fa-solid fa-comments"&gt;&lt;/i&gt; 粉絲交流區&lt;/h2&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="comment-form"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;textarea placeholder="分享你的心情或現場狀況吧..."&gt;&lt;/textarea&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div style="text-align: right;"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;button class="btn btn-primary"&gt;送出留言&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="comment-box"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;img src="https://i.pravatar.cc/150?u=a042581f4e29026704f" alt="Commenter Avatar" class="user-avatar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div class="comment-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;strong&gt;NCTzen123&lt;/strong&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;p&gt;天啊！超期待！我明天一定會到！&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;div class="comment-meta"&gt;1 小時前&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="comment-box"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;img src="https://i.pravatar.cc/150?u=a042581f4e29026704a" alt="Commenter Avatar" class="user-avatar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div class="comment-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;strong&gt;SionMyLove&lt;/strong&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;p&gt;有人知道現在排隊的人多嗎？&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;div class="comment-meta"&gt;30 分鐘前&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/section&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/main&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;aside class="event-detail-sidebar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="sticky-sidebar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;h3&gt;&lt;i class="fa-solid fa-calendar-check"&gt;&lt;/i&gt; 活動時間&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;p&gt;2025/06/15 13:00 ~ &lt;br&gt;2025/06/16 18:00&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">                             </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;h3&gt;&lt;i class="fa-solid fa-map-pin"&gt;&lt;/i&gt; 發放地點&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;p&gt;台北車站 M3 出口 (近添好運)&lt;br&gt;&lt;a href="#"&gt;在 Google Maps 上打開&lt;/a&gt;&lt;/p&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;div class="action-buttons"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                 </span>&lt;button class="btn btn-primary"&gt;&lt;i class="fa-solid fa-star"&gt;&lt;/i&gt; 收藏活動&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                 </span>&lt;button class="btn btn-secondary"&gt;&lt;i class="fa-solid fa-heart"&gt;&lt;/i&gt; 喜歡 (256)&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/aside&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div id="create-event-view" class="view"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="container"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="form-section"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;h1&gt;&lt;i class="fa-solid fa-wand-magic-sparkles"&gt;&lt;/i&gt; 發起一場新的應援活動&lt;/h1&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;p&gt;分享你的愛，讓更多粉絲一起參與！&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;form&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="event-title"&gt;活動標題&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;input type="text" id="event-title" placeholder="例如：NCT WISH出道百日應援"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="idol-group"&gt;偶像團體&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;input type="text" id="idol-group" placeholder="例如：NCT WISH"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="event-time"&gt;活動時間&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;input type="text" id="event-time" placeholder="例如：2025/06/15 13:00 - 18:00"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="event-location"&gt;發放地點&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;input type="text" id="event-location" placeholder="例如：台北車站 M3 出口"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="event-item"&gt;應援物圖片&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="upload-box"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                               </span>&lt;i class="fa-solid fa-cloud-arrow-up fa-2x"&gt;&lt;/i&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                               </span>&lt;p&gt;點擊此處或拖曳圖片上傳&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="item-desc"&gt;應援物說明&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;textarea id="item-desc" placeholder="詳細描述你的應援物，例如材質、尺寸、數量等。"&gt;&lt;/textarea&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>&lt;div class="form-group"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;label for="event-task"&gt;領取任務&lt;/label&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;textarea id="event-task" placeholder="告訴大家需要完成什麼任務才能領取，例如出示專輯、回答問題等。"&gt;&lt;/textarea&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 18px;"&gt;發佈活動&lt;/button&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/form&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;div id="profile-view" class="view"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;div class="container"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="profile-header"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Profile Avatar" class="profile-avatar"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div class="profile-info"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;h1&gt;你的名字&lt;/h1&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;p&gt;一個熱愛分享的粉絲。 &lt;a href="#"&gt;編輯個人檔案&lt;/a&gt;&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">                </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="profile-tabs"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div class="profile-tab active" data-tab="tab-saved"&gt;我的收藏&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div class="profile-tab" data-tab="tab-created"&gt;我發起的&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div class="profile-tab" data-tab="tab-achievements"&gt;成就牆&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;div class="profile-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div id="tab-saved" class="tab-pane active"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="event-grid"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;article class="event-card"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;img src="https://via.placeholder.com/400x250/AEC6CF/333333?text=NCT+WISH+小卡" alt="應援物圖片"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;div class="event-card-content"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                    </span>&lt;h3&gt;出道百日紀念應援&lt;/h3&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/article&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div id="tab-created" class="tab-pane" style="display:none;"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;p&gt;你還沒有發起過任何活動，快去發起一個吧！&lt;/p&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;div id="tab-achievements" class="tab-pane" style="display:none;"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;div class="achievement-grid"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="achievement-badge"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;i class="fa-solid fa-award"&gt;&lt;/i&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;span&gt;應援初心者&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;div class="achievement-badge"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;i class="fa-solid fa-rocket"&gt;&lt;/i&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;span&gt;首日衝刺王&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                             </span>&lt;div class="achievement-badge"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;i class="fa-solid fa-heart-circle-check"&gt;&lt;/i&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;span&gt;熱心回報員&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;div class="achievement-badge" style="opacity: 0.3;"&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;i class="fa-solid fa-crown"&gt;&lt;/i&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                                </span>&lt;span&gt;應援大師&lt;/span&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>&lt;/div&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/div&gt;</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;script&gt;</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>// 簡單的頁面切換腳本</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>const views = document.querySelectorAll('.view');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>const appContainer = document.getElementById('app-container');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>const loginView = document.getElementById('login-view');</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>function showView(viewId) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>// 處理登入後的介面顯示</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>if (viewId !== 'login-view' &amp;&amp; loginView.style.display !== 'none') {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>loginView.style.display = 'none';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>appContainer.style.display = 'block';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>}</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">            </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>// 切換主內容視圖</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>views.forEach(view =&gt; {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>if (view.id === viewId) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>view.classList.add('active');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>// 如果是在 app-container 內的 view, 則顯示它</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>if (appContainer.contains(view)) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                        </span>view.style.display = 'block';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>} else {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>view.classList.remove('active');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>// 如果是在 app-container 內的 view, 則隱藏它</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>if (appContainer.contains(view)) {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                         </span>view.style.display = 'none';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>}</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>});</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>window.scrollTo(0, 0); // 切換頁面後滾動到頂部</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>}</b></span></p>
+<p class="p2"><span class="s1"><b><span class="Apple-converted-space">        </span></b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>// 個人頁面頁籤切換</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>const profileTabs = document.querySelectorAll('.profile-tab');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>const tabPanes = document.querySelectorAll('.tab-pane');</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>profileTabs.forEach(tab =&gt; {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>tab.addEventListener('click', () =&gt; {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>// remove active class from all tabs and panes</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>profileTabs.forEach(t =&gt; t.classList.remove('active'));</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>tabPanes.forEach(p =&gt; {</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>p.classList.remove('active');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                    </span>p.style.display = 'none';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>});</b></span></p>
+<p class="p2"><span class="s1"><b></b></span><br></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>// add active class to clicked tab and corresponding pane</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>tab.classList.add('active');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>const targetPaneId = tab.getAttribute('data-tab');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>const targetPane = document.getElementById(targetPaneId);</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>targetPane.classList.add('active');</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">                </span>targetPane.style.display = 'block';</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">            </span>});</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">        </span>});</b></span></p>
+<p class="p1"><span class="s1"><b><span class="Apple-converted-space">    </span>&lt;/script&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/body&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/html&gt;</b></span></p>
 </body>
 </html>
